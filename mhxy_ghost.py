@@ -170,7 +170,7 @@ class Ghost(MhxyScript):
                 cooldown(0.5)
                 self._count += 1
                 log("已完成抓鬼" + str(self._count) + "轮数")
-                if self._count > self.maxRound:
+                if self.maxRound>0 and self._count > self.maxRound:
                     self._flag = False
                     # pl.playsound('resources/common/music.mp3')
                 else:

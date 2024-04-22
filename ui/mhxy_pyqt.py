@@ -37,17 +37,20 @@ class MhxyApplication(QMainWindow, main_win):
         # validator_regx = QRegularExpressionValidator(self)
         # validator_regx.setRegularExpression(regexp)
         # self.lineEdit.setValidator(validator_regx)
+        dir = os.path.dirname(os.path.dirname(__file__))
         self.file_path = os.path.join(os.path.abspath('.'), r'script.ini')
-        dir = self.lineEdit.text()
         self.conn = ConfigParser()
         if os.path.exists(self.file_path):
             self.conn.read(self.file_path)
-            dir = self.conn.get('main', 'dir')
-        if dir == "" or dir is None:
-            dir = os.path.abspath('.').replace("\\ui", "")
-            if self.conn.has_section("main"):
-                self.conn.set('main', 'dir', dir)
-                self.conn.write(open(self.file_path, 'w'))
+        else:
+            print("配置文件不存在")
+            return
+        #     dir = self.conn.get('main', 'dir')
+        # if dir == "" or dir is None:
+        #     dir = os.path.abspath('.').replace("\\ui", "")
+        #     if self.conn.has_section("main"):
+        #         self.conn.set('main', 'dir', dir)
+        #         self.conn.write(open(self.file_path, 'w'))
         self.cusomer_ipt.setText(self.conn.get('main', 'lastscript'))
         self.lineEdit.setText(dir)
         os.chdir(dir)
