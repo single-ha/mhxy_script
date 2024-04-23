@@ -11,7 +11,7 @@ class Baotu(MhxyScript):
 
     def __init__(self, idx=0, changWinPos=True, resizeToSmall=False, config=None, stopCheck=None) -> None:
         super().__init__(idx, changWinPos, resizeToSmall, config, stopCheck=stopCheck)
-        file_path = os.path.join(os.path.abspath('.'), 'resources/richang/richang.ini')
+        file_path = os.path.join(os.path.abspath('..'), 'resources/richang/richang.ini')
         if not os.path.exists(file_path):
             raise FileNotFoundError("文件不存在")
         conn = ConfigParser()

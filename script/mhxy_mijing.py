@@ -36,7 +36,7 @@ class MiJing(MhxyScript):
             print("关闭可使用物品对继续战斗的遮挡")
             times += 1
         if btl is None:
-            pl.playsound('resources/common/music.mp3')
+            pl.playsound('../resources/common/music.mp3')
         pyautogui.leftClick(btl.x, btl.y)  # 继续战斗
         cooldown(2.5)
         self.chase()

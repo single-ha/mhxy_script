@@ -10,7 +10,7 @@ class Mihunta(MhxyScript):
 
     def __init__(self, idx=0, changWinPos=True, resizeToSmall=False) -> None:
         super().__init__(idx, changWinPos, resizeToSmall)
-        file_path = os.path.join(os.path.abspath('.'), 'resources/mihunta/mihunta.ini')
+        file_path = os.path.join(os.path.abspath('..'), 'resources/mihunta/mihunta.ini')
         if not os.path.exists(file_path):
             raise FileNotFoundError("文件不存在")
         conn = ConfigParser()

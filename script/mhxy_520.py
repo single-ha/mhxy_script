@@ -25,4 +25,4 @@ if __name__ == '__main__':
         if args.shutdown == "True":
             os.system("shutdown -s")
     except (FailSafeException):
-        pl.playsound('resources/common/music.mp3')
+        pl.playsound('../resources/common/music.mp3')

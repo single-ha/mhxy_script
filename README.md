@@ -35,24 +35,24 @@ PS:电脑配置可以的推荐搞个虚拟机运行，这样不仅可以自定�
 
 ## 文件说明
 * ui/mhxy_pyqt 界面程序
-* mhxy_520 副本捉鬼
-* mhxy_even_guaji 常用挂机系列汇总 (可用于晚间挂机)
-* mhxy_richang 宝图 秘境 答题 押镖
-* mhxy_bangpai2 帮派任务(小窗口)
-* mhxy_baotu 宝图
-* mhxy_mijing 秘境
-* mhxy_dati 答题
-* mhxy_yabiao 押镖
-* mhxy_fuben 日常副本任务
-* mhxy_ghost 抓鬼
-* mhxy_menpai 周一门派
-* mhxy_haidi 周三海底
-* mhxy_mihunta 周五迷魂塔
-* mhxy_auto_battle 自动战斗工具 (可用于混“28怒”、玲珑石等任务挂机)
-* mhxy_hanhua 喊话工具
-* mhxy_mine 挖矿
-* mhxy_remote_control 远程控制模块 例如接收指令执行任务
-* mhxy_remote_client 用于对接 mhxy_shopping2 和 mhxy_remote_control 的工具
-* mhxy_shopping 蹲非珍品
-* mhxy_shopping2 蹲珍品
-* mhxy_shopping3 截胡珍品 (不关注、使用搜索的方式)
+* script/mhxy_520 副本捉鬼
+* script/mhxy_even_guaji 常用挂机系列汇总 (可用于晚间挂机)
+* script/mhxy_richang 宝图 秘境 答题 押镖
+* script/mhxy_bangpai2 帮派任务(小窗口)
+* script/mhxy_baotu 宝图
+* script/mhxy_mijing 秘境
+* script/mhxy_dati 答题
+* script/mhxy_yabiao 押镖
+* script/mhxy_fuben 日常副本任务
+* script/mhxy_ghost 抓鬼
+* script/mhxy_menpai 周一门派
+* script/mhxy_haidi 周三海底
+* script/mhxy_mihunta 周五迷魂塔
+* script/mhxy_auto_battle 自动战斗工具 (可用于混“28怒”、玲珑石等任务挂机)
+* script/mhxy_hanhua 喊话工具
+* script/mhxy_mine 挖矿
+* script/mhxy_remote_control 远程控制模块 例如接收指令执行任务
+* script/mhxy_remote_client 用于对接 mhxy_shopping2 和 mhxy_remote_control 的工具
+* script/mhxy_shopping 蹲非珍品
+* script/mhxy_shopping2 蹲珍品
+* script/mhxy_shopping3 截胡珍品 (不关注、使用搜索的方式)

@@ -10,7 +10,7 @@ class Menpai(MhxyScript):
 
     def __init__(self, idx=0, changWinPos=True, resizeToSmall=False) -> None:
         super().__init__(idx, changWinPos, resizeToSmall)
-        file_path = os.path.join(os.path.abspath('.'), 'resources/menpai/menpai.ini')
+        file_path = os.path.join(os.path.abspath('..'), 'resources/menpai/menpai.ini')
         if not os.path.exists(file_path):
             raise FileNotFoundError("文件不存在")
         conn = ConfigParser()

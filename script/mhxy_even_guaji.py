@@ -58,4 +58,4 @@ if __name__ == '__main__':
         #     pl.playsound('resources/common/music.mp3')
         os.system("shutdown -s")
     except (FailSafeException):
-        pl.playsound('resources/common/music.mp3')
+        pl.playsound('../resources/common/music.mp3')

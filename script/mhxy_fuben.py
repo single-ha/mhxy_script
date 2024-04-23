@@ -116,7 +116,7 @@ class Fuben(MhxyScript):
                 log("下一个副本" + str(self._fubenIdx))
             else:
                 pass
-                pl.playsound('resources/common/music.mp3')
+                pl.playsound('../resources/common/music.mp3')
         return True
 
     def loginIn(self):

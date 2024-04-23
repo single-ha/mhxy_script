@@ -22,7 +22,7 @@ class Ghost(MhxyScript):
 
     def __init__(self, idx=0, pos=None, round=None, changWinPos=True) -> None:
         conn = ConfigParser()
-        file_path = os.path.join(os.path.abspath('.'), 'resources/ghost/ghost.ini')
+        file_path = os.path.join(os.path.abspath('..'), 'resources/ghost/ghost.ini')
         if not os.path.exists(file_path):
             raise FileNotFoundError("文件不存在")
         conn.read(file_path)
@@ -131,7 +131,7 @@ class Ghost(MhxyScript):
             pyautogui.leftClick(tag.x + relativeX2Act(3.5), tag.y + relativeY2Act(0.2))
             waitUtilFindPic('resources/ghost/start_ghost0.png')
         else:
-            pl.playsound('resources/common/music.mp3')
+            pl.playsound('../resources/common/music.mp3')
 
     def _startGhostDo(self):
         cooldown(5 * 60)
@@ -184,7 +184,7 @@ class Ghost(MhxyScript):
             # 二十分钟没有下一轮 怀疑掉线
             if self._startTimestamp is not None and (dt.datetime.now() - self._startTimestamp).seconds > self.warnMinute * 60:
                 self.chase()
-                naozhong = threading.Thread(target=pl.playsound('resources/common/music.mp3'))
+                naozhong = threading.Thread(target=pl.playsound('../resources/common/music.mp3'))
                 # 闹钟提醒
                 naozhong.start()
             cooldown(2)
@@ -209,4 +209,4 @@ if __name__ == '__main__':
     try:
         Ghost(idx=args.idx, round=args.round, pos=args.pos).do()
     except (FailSafeException):
-        pl.playsound('resources/common/music.mp3')
+        pl.playsound('../resources/common/music.mp3')

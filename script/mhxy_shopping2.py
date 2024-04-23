@@ -164,7 +164,7 @@ class Shopping2:
                         cooldown(5)
                         self._refresh()
                         if Util.locateCenterOnScreen(r'resources/shop/empty_follow.png') is None:
-                            pl.playsound('resources/common/music.mp3')
+                            pl.playsound('../resources/common/music.mp3')
                         # 会只删除第一个出现的
                         self._datetimeList.remove(time)
                     self._count += 1

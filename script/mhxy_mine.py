@@ -103,7 +103,7 @@ def shuangzhiwaihua():
         # pyautogui.hotkey('alt', 'w', interval=0.25)
         time+=1
         if time >= 15:
-            pl.playsound('resources/common/music.mp3')
+            pl.playsound('../resources/common/music.mp3')
         cooldown(1)
 
 # 双指内划
@@ -115,7 +115,7 @@ def shuangzhineihua():
         # pyautogui.hotkey('alt', 'w', interval=0.25)
         time+=1
         if time >= 15:
-            pl.playsound('resources/common/music.mp3')
+            pl.playsound('../resources/common/music.mp3')
         cooldown(1)
 
 class _NormStandPoint(_StandPoint):
@@ -247,7 +247,7 @@ class Mine(MhxyScript):
             # 判断是否出现遮挡物
             shop = Util.locateCenterOnScreen(r'resources/mine/shop.png', confidence=0.95)
             if shop is None:
-                pl.playsound('resources/common/music.mp3')
+                pl.playsound('../resources/common/music.mp3')
                 return
             for mine in mineList:
                 point = Util.locateCenterOnScreen(mine.pic,

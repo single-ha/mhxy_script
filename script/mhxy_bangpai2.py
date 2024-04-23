@@ -27,7 +27,7 @@ class Bangpai(MhxyScript):
     def __init__(self, idx=0, changWinPos=True) -> None:
         # init(resizeToSmall=True)
         super().__init__(idx=idx, changWinPos=changWinPos)
-        file_path = os.path.join(os.path.abspath('.'), 'resources/bangpai/small/bangpai.ini')
+        file_path = os.path.join(os.path.abspath('..'), 'resources/bangpai/small/bangpai.ini')
         if not os.path.exists(file_path):
             raise FileNotFoundError("文件不存在")
         conn = ConfigParser()
