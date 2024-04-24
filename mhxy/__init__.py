@@ -4,6 +4,7 @@ import logging
 import sys
 import threading
 import time
+import os
 
 import playsound as pl
 import pyautogui
@@ -11,15 +12,26 @@ import pydirectinput
 import pyperclip
 from pygetwindow import PyGetWindowException, BaseWindow
 
-LOGGER_ENABLE = True
+def get_rootPath():
+    try:
+        base_path = sys._MEIPASS
+    except AttributeError:
+        base_path =os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+    return base_path
 
+LOGGER_ENABLE = True
 logger = logging.getLogger('mylogger')
+rootPath = get_rootPath()
+os.chdir(rootPath)
+print("rootPath:"+rootPath)
 logger.setLevel(logging.DEBUG)
 # 创建一个处理器，用于写入日志文件
 fh = logging.FileHandler('mhxy_script.log')
 fh.setLevel(logging.DEBUG)
 # 添加到 logger 中
 logger.addHandler(fh)
+
+
 
 def log(*content, **kwargs):
     level = int(kwargs.get('level', logging.INFO))
@@ -364,7 +376,6 @@ class Util:
         pyperclip.copy(text)
         Util.hotKey('Ctrl', 'v')
 
-
 def resize2Small(windows):
     while not windows.isActive:
         cooldown(1)
@@ -516,3 +527,5 @@ class MhxyScript:
 
     def do(self):
         pass
+
+

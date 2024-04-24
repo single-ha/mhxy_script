@@ -22,7 +22,7 @@ class Ghost(MhxyScript):
 
     def __init__(self, idx=0, pos=None, round=None, changWinPos=True) -> None:
         conn = ConfigParser()
-        file_path = os.path.join(os.path.abspath('..'), 'resources/ghost/ghost.ini')
+        file_path = os.path.join(os.path.abspath('.'), 'resources/ghost/ghost.ini')
         if not os.path.exists(file_path):
             raise FileNotFoundError("文件不存在")
         conn.read(file_path)

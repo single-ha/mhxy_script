@@ -37,13 +37,16 @@ class MhxyApplication(QMainWindow, main_win):
         # validator_regx = QRegularExpressionValidator(self)
         # validator_regx.setRegularExpression(regexp)
         # self.lineEdit.setValidator(validator_regx)
-        dir = os.path.dirname(os.path.dirname(__file__))
-        self.file_path = os.path.join(os.path.abspath('.'), r'script.ini')
+        # self.file_path = os.path.join(os.path.abspath('.'), r'script.ini')
+        self.rootPath = self.get_rootPath()
+        os.chdir(self.rootPath)
+        self.file_path =os.path.join(self.rootPath, r'ui/script.ini')
         self.conn = ConfigParser()
         if os.path.exists(self.file_path):
             self.conn.read(self.file_path)
+            print("读取配置文件:" + self.file_path)
         else:
-            print("配置文件不存在")
+            print("配置文件不存在:"+self.file_path)
             return
         #     dir = self.conn.get('main', 'dir')
         # if dir == "" or dir is None:
@@ -52,8 +55,7 @@ class MhxyApplication(QMainWindow, main_win):
         #         self.conn.set('main', 'dir', dir)
         #         self.conn.write(open(self.file_path, 'w'))
         self.cusomer_ipt.setText(self.conn.get('main', 'lastscript'))
-        self.lineEdit.setText(dir)
-        os.chdir(dir)
+        self.lineEdit.setText(self.rootPath)
         self.lineEdit.textChanged.connect(self.dirChange)
         # 日常
         self.batch_richang.clicked.connect(self.richangTask)
@@ -87,6 +89,15 @@ class MhxyApplication(QMainWindow, main_win):
         self.close_mission_btn.hide()
         self.label.hide()
 
+    def get_path(self, relative_path):
+        return os.path.join(self.rootPath, relative_path)
+
+    def get_rootPath(self):
+        try:
+            base_path = sys._MEIPASS
+        except AttributeError:
+            base_path = os.path.abspath("..")
+        return base_path
     def exec_script(self, target, args=""):
         # subprocess.check_call(f'python {self.lineEdit.text()}\\{target}.py {args}')
         cmd = f'start python{"" if self.black_win.isChecked() else "w"} "{self.lineEdit.text()}\\script\\{target}.py" {args}'
