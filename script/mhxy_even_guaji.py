@@ -46,10 +46,10 @@ if __name__ == '__main__':
 
         config = init(idx=0)
         baotu = Baotu(config=config)
-        if gotoActivity(r'resources/richang/baotu.png'):
-           baotu.mission()
+        # if gotoActivity(r'resources/richang/baotu.png'):
+        #    baotu.mission()
         baotu.do()
-        if datetime.datetime.now().weekday() != 0 and gotoActivity(r'resources/richang/mijing.png'):
+        if datetime.datetime.now().weekday() != 0:
             MiJing(config=config).do()
 
         log("关机")

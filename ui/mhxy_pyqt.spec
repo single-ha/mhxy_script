@@ -5,7 +5,7 @@ a = Analysis(
     ['mhxy_pyqt.py'],
     pathex=[],
     binaries=[],
-    datas=[('../resources', 'resources'),('script.ini','script.ini')],
+    datas=[('../resources', 'resources'),('script.ini','ui')],
     hiddenimports=[],
     hookspath=[],
     hooksconfig={},

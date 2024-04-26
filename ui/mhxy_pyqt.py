@@ -37,10 +37,10 @@ class MhxyApplication(QMainWindow, main_win):
         # validator_regx = QRegularExpressionValidator(self)
         # validator_regx.setRegularExpression(regexp)
         # self.lineEdit.setValidator(validator_regx)
-        # self.file_path = os.path.join(os.path.abspath('.'), r'script.ini')
         self.rootPath = self.get_rootPath()
         os.chdir(self.rootPath)
         self.file_path =os.path.join(self.rootPath, r'ui/script.ini')
+        # self.file_path = os.path.join(os.path.abspath('.'), r'script.ini')
         self.conn = ConfigParser()
         if os.path.exists(self.file_path):
             self.conn.read(self.file_path)

@@ -15,14 +15,14 @@ if __name__ == '__main__':
     config = init(idx=args.idx)
     if 'baotu' in missionSet:
         baotu = Baotu(config=config)
-        if gotoActivity(r'resources/richang/baotu.png'):
-           baotu.mission()
+        # if gotoActivity(r'resources/richang/baotu.png'):
+        #    baotu.mission()
         baotu.do()
     if 'mijing' in missionSet:
-        if gotoActivity(r'resources/richang/mijing.png'):
-            MiJing(config=config).do()
+        # if gotoActivity(r'resources/richang/mijing.png'):
+        MiJing(config=config).do()
     if 'dati' in missionSet:
         DaTi(config=config).do()
     if 'yabiao' in missionSet:
-        if gotoActivity(r'resources/richang/yabiao.png'):
-            YaBiao(config=config).do()
+        # if gotoActivity(r'resources/richang/yabiao.png'):
+        YaBiao(config=config).do()

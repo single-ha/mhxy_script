@@ -77,6 +77,8 @@ class Baotu(MhxyScript):
         log("end")
 
     def do(self):
+        if gotoActivity(r'resources/richang/baotu.png'):
+           self.mission()
         cooldown(1)
         if self._run_baotu() is False:
             return

@@ -7,6 +7,8 @@ from mhxy import *
 class MiJing(MhxyScript):
 
     def do(self):
+        if gotoActivity(r'resources/richang/mijing.png') is False:
+            return
         def escape():
             cooldown(1)
             Util.leftClick(-1.5, 9.5)

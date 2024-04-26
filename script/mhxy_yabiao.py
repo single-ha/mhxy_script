@@ -7,6 +7,8 @@ from mhxy import *
 class YaBiao(MhxyScript):
 
     def do(self):
+        if gotoActivity(r'resources/richang/yabiao.png') is False:
+            return
         finishTimes = 0
         while True:
             finish = Util.locateCenterOnScreen(r'resources/richang/yabiao_finish.png')
